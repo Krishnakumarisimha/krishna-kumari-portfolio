@@ -62,17 +62,11 @@ export default function Home() {
             <div className="flex flex-wrap gap-5 mb-16">
 
              <a
-                href="#featured"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("featured")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
-                className="bg-[#D4AF37] text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
-              >
-                View My Work
-              </a>
+  href="#featured"
+  className="bg-[#D4AF37] text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
+>
+  View My Work
+</a>
               <a
                 href="#contact"
                 className="border border-white/20 px-8 py-4 rounded-full hover:bg-white hover:text-black transition"
@@ -486,136 +480,125 @@ export default function Home() {
         </div>
 
       </section>
+{/* FEATURED WORK */}
+<section id="featured" className="py-32 px-6 scroll-mt-32">
 
-      {/* FEATURED WORK */}
-      <section id="featured" className="py-32 px-6">
+  <div className="max-w-7xl mx-auto">
 
-        <div className="max-w-7xl mx-auto">
+    {/* TITLE */}
+    <div className="text-center mb-20">
 
-          <div className="text-center mb-20">
+      <p className="text-[#D4AF37] uppercase tracking-[5px] mb-5">
+        Featured Work
+      </p>
 
-            <p className="text-[#D4AF37] uppercase tracking-[5px] mb-5">
-              Featured Work
+      <h2 className="text-5xl font-bold mb-8">
+        Curated Career Branding Projects
+      </h2>
+
+    </div>
+
+    {/* GRID */}
+    <div className="grid md:grid-cols-3 gap-8">
+
+      {[
+        {
+          title: "Strategic Resume Writing Services",
+          img: "/resume.png",
+          desc:
+            "ATS-optimized, role-specific resumes designed to highlight achievements, improve recruiter visibility, and increase interview chances.",
+          tags: [
+            "ATS Optimization",
+            "Role Customization",
+            "Achievement Focus",
+            "Professional Formatting",
+          ],
+        },
+        {
+          title: "Professional Portfolio Design",
+          img: "/portfolio.png",
+          desc:
+            "Clean, structured, and visually compelling portfolios that present skills, experience, and achievements with clarity.",
+          tags: [
+            "Portfolio Design",
+            "Case Study Layout",
+            "Visual Storytelling",
+            "UI Structure",
+          ],
+        },
+        {
+          title: "LinkedIn Branding & Optimization",
+          img: "/linkedin.png",
+          desc:
+            "LinkedIn profile transformation using keyword strategy, branding, and recruiter-focused positioning.",
+          tags: [
+            "Profile Branding",
+            "Keyword Strategy",
+            "Headline Optimization",
+            "Visibility Growth",
+          ],
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="bg-white/5 border border-white/10 rounded-[35px] overflow-hidden backdrop-blur-xl hover:border-[#D4AF37]/40 hover:-translate-y-2 transition duration-300"
+        >
+
+          {/* IMAGE FIRST */}
+          <div className="h-64 w-full overflow-hidden relative group">
+
+  <img
+    src={item.img}
+    alt={item.title}
+    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+  />
+
+  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+
+</div>
+
+          {/* CONTENT */}
+          <div className="p-10">
+
+            {/* TITLE */}
+            <h3 className="text-2xl font-bold mb-4 text-[#D4AF37]">
+              {item.title}
+            </h3>
+
+            {/* DESCRIPTION */}
+            <p className="text-gray-400 leading-8 mb-6">
+              {item.desc}
             </p>
 
-            <h2 className="text-5xl font-bold mb-8">
-              Curated Career Branding Projects
-            </h2>
-
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            {/* CARD 1 */}
-            <div className="bg-white/5 border border-white/10 rounded-[35px] p-10 backdrop-blur-xl hover:border-[#D4AF37]/40 transition">
-
-              <h3 className="text-3xl font-bold mb-6 text-[#D4AF37]">
-                Strategic Resume Writing Services
-              </h3>
-
-              <p className="text-gray-400 leading-8 mb-8">
-                I create ATS-optimized, role-specific resumes designed to highlight achievements, measurable impact, and professional expertise, ensuring strong recruiter engagement and improved interview opportunities.
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  ATS Optimization & Compliance
+            {/* TAGS */}
+            <div className="flex flex-wrap gap-2">
+              {item.tags.map((tag, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-xs text-[#D4AF37]"
+                >
+                  {tag}
                 </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Role-Specific Customization
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Achievement Highlighting
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Professional Formatting
-                </span>
-
-              </div>
-
-            </div>
-
-            {/* CARD 2 */}
-            <div className="bg-white/5 border border-white/10 rounded-[35px] p-10 backdrop-blur-xl hover:border-[#D4AF37]/40 transition">
-
-              <h3 className="text-3xl font-bold mb-6 text-[#D4AF37]">
-                Professional Portfolio Design
-              </h3>
-
-              <p className="text-gray-400 leading-8 mb-8">
-                I design visually refined digital and PDF portfolios that effectively present skills, experience, and achievements through structured storytelling and modern design principles.
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Portfolio Design
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Case Study Presentation
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Visual Storytelling
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Accessibility Layout
-                </span>
-
-              </div>
-
-            </div>
-
-            {/* CARD 3 */}
-            <div className="bg-white/5 border border-white/10 rounded-[35px] p-10 backdrop-blur-xl hover:border-[#D4AF37]/40 transition">
-
-              <h3 className="text-3xl font-bold mb-6 text-[#D4AF37]">
-                LinkedIn Branding & Optimization
-              </h3>
-
-              <p className="text-gray-400 leading-8 mb-8">
-                I transform LinkedIn profiles into powerful personal branding tools by enhancing content, structure, and keyword strategy to improve visibility and attract relevant opportunities.
-              </p>
-
-              <div className="flex flex-wrap gap-3">
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Profile Branding
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Keyword Strategy
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Optimized Headlines
-                </span>
-
-                <span className="px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-sm text-[#D4AF37]">
-                  Experience Enhancement
-                </span>
-
-              </div>
-
+              ))}
             </div>
 
           </div>
 
         </div>
+      ))}
 
-      </section>
+    </div>
+
+  </div>
+
+</section>
 
       {/* TESTIMONIALS */}
 <section id="testimonials" className="py-32 px-6 overflow-hidden">
 
   <div className="max-w-7xl mx-auto">
 
+    {/* TITLE */}
     <div className="text-center mb-20">
 
       <p className="text-[#D4AF37] uppercase tracking-[5px] mb-5">
@@ -623,78 +606,51 @@ export default function Home() {
       </p>
 
       <h2 className="text-5xl font-bold leading-tight mb-10">
-        Client Feedback & Recommendations
+        Client Recommendations
       </h2>
 
       <p className="text-gray-400 leading-9 text-lg max-w-3xl mx-auto">
-        Real feedback from professionals I worked with across resume writing,
-        LinkedIn optimization, portfolio development, and personal branding.
+        Genuine recommendations and feedback shared by professionals
+        across resume writing, LinkedIn optimization, and portfolio services.
       </p>
 
     </div>
 
-    {/* SCROLL ROW */}
+    {/* AUTO SCROLL */}
     <div className="relative overflow-hidden">
 
       <motion.div
-        className="flex gap-8"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      >
-
+  className="flex gap-8"
+  animate={{ x: [0, -2200] }}
+  transition={{
+    duration: 20,
+    repeat: Infinity,
+    ease: "linear",
+  }}
+>
         {[
-          {
-            name: "Rakesh Kumar",
-            role: "Full Stack MERN Developer",
-            feedback:
-              "Resume was very nice. LinkedIn optimization was great and professionally structured.",
-          },
-
-          {
-            name: "Buzude Monica-Coca",
-            role: "Administrative Director",
-            feedback:
-              "Highly recommend Krishna Kumari Simha for professional branding services. Excellent resume structure and ATS optimization.",
-          },
-
-          {
-            name: "Robert Nolan",
-            role: "Publishing Consultant",
-            feedback:
-              "Krishna is a consummate professional. Timely, intuitive, articulate, creative and highly recommended.",
-          },
-
-          {
-            name: "Keston Hudson",
-            role: "PM / Senior Consultant",
-            feedback:
-              "Very detail-oriented and genuinely helps professionals improve their profiles and expand their network.",
-          },
-          
-        ].map((item, index) => (
+          "/rec1.png",
+          "/rec2.png",
+          "/rec3.png",
+          "/rec4.png",
+          "/rec1.png",
+          "/rec2.png",
+          "/rec3.png",
+          "/rec4.png",
+        ].map((img, index) => (
 
           <div
-            key={index}
-            className="min-w-[380px] bg-white/5 border border-white/10 rounded-[35px] p-8 backdrop-blur-xl"
-          >
+  key={index}
+  className="min-w-[850px] bg-white rounded-[30px] overflow-hidden shadow-[0_0_40px_rgba(212,175,55,0.15)] flex items-center justify-center p-4"
+>
 
-            <h3 className="text-2xl font-bold text-white mb-2">
-              {item.name}
-            </h3>
+  <img
+    src={img}
+    alt="Client Recommendation"
+    className="w-full h-auto rounded-2xl object-contain"
+  />
 
-            <p className="text-[#D4AF37] text-sm mb-6">
-              {item.role}
-            </p>
-
-            <p className="text-gray-400 leading-8">
-              "{item.feedback}"
-            </p>
-
-          </div>
+</div>
 
         ))}
 
@@ -705,7 +661,6 @@ export default function Home() {
   </div>
 
 </section>
-
      {/* CONTACT */}
 <section id="contact" className="py-32 px-6">
 
