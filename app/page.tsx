@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white overflow-hidden relative scroll-smooth">
+    <main className="bg-black text-white relative scroll-smooth">
 
       {/* BACKGROUND EFFECTS */}
       <div className="fixed top-0 left-0 w-[600px] h-[600px] bg-[#D4AF37]/10 blur-[140px] rounded-full"></div>
@@ -54,24 +54,24 @@ export default function Home() {
             </p>
 
             <p className="text-gray-400 leading-9 text-lg max-w-3xl mb-10">
-              I specialize in creating ATS-optimized resumes and visually compelling portfolios that elevate personal branding and enhance career visibility.
+              Helping professionals build impactful careers with strategic resumes, LinkedIn branding, and ATS-optimized career solutions.
               <br /><br />
               I help professionals articulate their achievements with clarity and structure, transforming profiles into powerful tools that attract interview opportunities.
             </p>
 
             <div className="flex flex-wrap gap-5 mb-16">
-
+            
              <a
   href="#featured"
   className="bg-[#D4AF37] text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
 >
-  View My Work
+  View My Service
 </a>
               <a
                 href="#contact"
                 className="border border-white/20 px-8 py-4 rounded-full hover:bg-white hover:text-black transition"
               >
-                Let’s Connect
+                Contact Me
               </a>
 
             </div>
@@ -127,10 +127,6 @@ export default function Home() {
             My approach combines strategy, storytelling, and design to create career documents that not only look professional but also deliver measurable results.
           </p>
 
-          <p className="text-gray-400 leading-9">
-            My mission is simple: to help professionals present their true potential with confidence and position themselves for better opportunities worldwide.
-          </p>
-
         </div>
 
       </section>
@@ -154,8 +150,7 @@ export default function Home() {
                 <img
                   src="/profile.jpg"
                   alt="Krishna Kumari"
-                  className="w-full h-[500px] object-cover object-top"
-                />
+className="w-full h-[500px] object-cover object-top rounded-[40px] border border-[#D4AF37]/20 shadow-[0_0_50px_rgba(212,175,55,0.15)]"                />
               </div>
             </div>
 
@@ -480,9 +475,11 @@ export default function Home() {
         </div>
 
       </section>
-{/* FEATURED WORK */}
-<section id="featured" className="py-32 px-6 scroll-mt-32">
-
+       {/* FEATURED WORK */}
+<section
+  id="featured"
+  className="py-32 px-6 scroll-mt-40"
+>
   <div className="max-w-7xl mx-auto">
 
     {/* TITLE */}
@@ -514,6 +511,7 @@ export default function Home() {
             "Professional Formatting",
           ],
         },
+
         {
           title: "Professional Portfolio Design",
           img: "/portfolio.png",
@@ -526,6 +524,7 @@ export default function Home() {
             "UI Structure",
           ],
         },
+
         {
           title: "LinkedIn Branding & Optimization",
           img: "/linkedin.png",
@@ -539,23 +538,24 @@ export default function Home() {
           ],
         },
       ].map((item, index) => (
+
         <div
           key={index}
           className="bg-white/5 border border-white/10 rounded-[35px] overflow-hidden backdrop-blur-xl hover:border-[#D4AF37]/40 hover:-translate-y-2 transition duration-300"
         >
 
-          {/* IMAGE FIRST */}
+          {/* IMAGE */}
           <div className="h-64 w-full overflow-hidden relative group">
 
-  <img
-    src={item.img}
-    alt={item.title}
-    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-  />
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            />
 
-  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
 
-</div>
+          </div>
 
           {/* CONTENT */}
           <div className="p-10">
@@ -572,25 +572,29 @@ export default function Home() {
 
             {/* TAGS */}
             <div className="flex flex-wrap gap-2">
+
               {item.tags.map((tag, i) => (
+
                 <span
                   key={i}
                   className="px-3 py-1 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-xs text-[#D4AF37]"
                 >
                   {tag}
                 </span>
+
               ))}
+
             </div>
 
           </div>
 
         </div>
+
       ))}
 
     </div>
 
   </div>
-
 </section>
 
       {/* TESTIMONIALS */}
@@ -620,7 +624,7 @@ export default function Home() {
     <div className="relative overflow-hidden">
 
       <motion.div
-  className="flex gap-8"
+  className="flex gap-8 animate-scroll"
   animate={{ x: [0, -2200] }}
   transition={{
     duration: 20,
@@ -645,11 +649,10 @@ export default function Home() {
 >
 
   <img
-    src={img}
-    alt="Client Recommendation"
-    className="w-full h-auto rounded-2xl object-contain"
-  />
-
+  src={img}
+  alt="Client Recommendation"
+  className="w-full h-auto rounded-[30px] object-contain border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.4)] hover:scale-[1.02] transition duration-500"
+/>
 </div>
 
         ))}
@@ -721,54 +724,101 @@ export default function Home() {
             LinkedIn Profile Optimization & Branding
           </h3>
 
-          <p className="text-gray-400 leading-8 mb-8">
+          <p className="text-gray-400 leading-8 mb-10">
             Enhancing LinkedIn profiles with strong positioning, keyword
             strategy, and impactful content.
           </p>
 
-          {/* CONTACT DETAILS MOVED HERE */}
-          <div className="space-y-5">
+          {/* CONTACT DETAILS */}
+          <div className="space-y-6 relative z-50">
 
-            <div>
+            {/* LOCATION */}
+            <div className="flex items-start gap-4">
 
-              <h3 className="text-lg font-semibold text-[#D4AF37] mb-2">
-                Location
-              </h3>
+              <div className="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-xl">
+                📍
+              </div>
 
-              <p className="text-gray-400">
-                Bengaluru, India (Open to Remote Opportunities Worldwide)
-              </p>
+              <div>
+                <h3 className="text-lg font-semibold text-[#D4AF37] mb-1">
+                  Location
+                </h3>
+
+                <p className="text-gray-400 leading-7">
+                  Bengaluru, India (Open to Remote Opportunities Worldwide)
+                </p>
+              </div>
 
             </div>
 
-       <div>
-  <h3 className="text-lg font-semibold text-[#D4AF37] mb-2">
-    Email
-  </h3>
+           {/* EMAIL */}
+<div className="flex items-start gap-4">
 
-  <a
-    href="mailto:krishnakumarisimha29@gmail.com"
-    className="text-gray-400 hover:text-[#D4AF37] transition break-all"
-  >
-    krishnakumarisimha29@gmail.com
-  </a>
+  <div className="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-xl shrink-0">
+    ✉️
+  </div>
+
+  <div>
+    <h3 className="text-lg font-semibold text-[#D4AF37] mb-1">
+      Email
+    </h3>
+
+    <a
+      href="mailto:krishnakumarisimha29@gmail.com"
+      className="text-gray-400 hover:text-[#D4AF37] hover:underline transition cursor-pointer"
+    >
+      krishnakumarisimha29@gmail.com
+    </a>
+  </div>
+
+</div>
+{/* WHATSAPP */}
+<div className="flex items-start gap-4">
+
+  <div className="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-xl shrink-0">
+    💬
+  </div>
+
+  <div>
+    <h3 className="text-lg font-semibold text-[#D4AF37] mb-1">
+      WhatsApp
+    </h3>
+
+    <a
+      href="https://wa.me/919392315188"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-[#D4AF37] hover:underline transition cursor-pointer"
+    >
+      +91 93923 15188
+    </a>
+  </div>
+
 </div>
 
-<div>
-  <h3 className="text-lg font-semibold text-[#D4AF37] mb-2">
-    LinkedIn
-  </h3>
+{/* LINKEDIN */}
+<div className="flex items-start gap-4">
 
-  <a
-    href="https://www.linkedin.com/in/krishna-kumari-simha/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-400 hover:text-[#D4AF37] transition break-all"
-  >
-    linkedin.com/in/krishna-kumari-simha
-  </a>
+  <div className="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-xl shrink-0">
+    💼
+  </div>
+
+  <div>
+    <h3 className="text-lg font-semibold text-[#D4AF37] mb-1">
+      LinkedIn
+    </h3>
+
+    <a
+      href="https://www.linkedin.com/in/krishna-kumari-simha/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-[#D4AF37] hover:underline transition cursor-pointer"
+    >
+      linkedin.com/in/krishna-kumari-simha
+    </a>
+  </div>
+
 </div>
-
           </div>
 
         </div>
