@@ -13,40 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Krishna Kumari Simha | Resume & LinkedIn Branding Expert",
+  title: "Krishna Kumari Simha | Resume Writer & Portfolio Designer",
 
   description:
-    "Professional Resume Writing, LinkedIn Optimization, Portfolio Development, and Career Branding Services designed to help professionals stand out and grow globally.",
+    "Professional Resume Writing, LinkedIn Optimization, Portfolio Design and Career Branding Services.",
 
   keywords: [
     "Resume Writer",
+    "Professional Resume Writer",
+    "ATS Resume Writing",
     "LinkedIn Optimization",
+    "LinkedIn Branding",
     "Portfolio Designer",
-    "ATS Resume",
     "Career Branding",
     "Resume Writing Services",
-    "Professional Resume",
-    "LinkedIn Branding",
+    "Executive Resume Writer",
+    "Resume Consultant",
+    "Personal Branding",
+    "CV Writing Services",
+    "Modern Portfolio Design",
+    "LinkedIn Profile Optimization",
+    "Career Portfolio",
+    "ATS Optimized Resume",
+    "Freelance Resume Writer",
+    "Professional CV Writer",
   ],
-
-  authors: [{ name: "Krishna Kumari Simha" }],
-
-  creator: "Krishna Kumari Simha",
-
-  openGraph: {
-    title: "Krishna Kumari Simha | Resume & LinkedIn Branding Expert",
-
-    description:
-      "Professional Resume Writing, LinkedIn Optimization, Portfolio Development, and Career Branding Services.",
-
-    url: "https://krishna-kumari-portfolio.vercel.app",
-
-    siteName: "Krishna Kumari Portfolio",
-
-    locale: "en_US",
-
-    type: "website",
-  },
 };
 
 export default function RootLayout({
@@ -59,7 +50,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-black text-white">
+      <body className="min-h-full flex flex-col">
         {children}
       </body>
     </html>
