@@ -150,7 +150,7 @@ export default function Home() {
                 <img
                   src="/profile.jpeg"
                   alt="Krishna Kumari"
-className="w-full h-[700px] object-cover object-top rounded-[40px] border border-[#D4AF37]/20 shadow-[0_0_50px_rgba(212,175,55,0.15)]"                />
+className="w-full h-[500px] object-cover object-top rounded-[40px] border border-[#D4AF37]/20 shadow-[0_0_50px_rgba(212,175,55,0.15)]"                />
               </div>
             </div>
 
