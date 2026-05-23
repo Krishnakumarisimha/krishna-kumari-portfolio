@@ -148,7 +148,7 @@ export default function Home() {
             <div className="sticky top-32">
               <div className="rounded-[40px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
                 <img
-                  src="/profile.jpg"
+                  src="/profile.jpeg"
                   alt="Krishna Kumari"
 className="w-full h-[500px] object-cover object-top rounded-[40px] border border-[#D4AF37]/20 shadow-[0_0_50px_rgba(212,175,55,0.15)]"                />
               </div>
