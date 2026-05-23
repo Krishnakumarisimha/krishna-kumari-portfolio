@@ -772,29 +772,6 @@ className="w-full h-[500px] object-cover object-top rounded-[40px] border border
   </div>
 
 </div>
-{/* WHATSAPP */}
-<div className="flex items-start gap-4">
-
-  <div className="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-xl shrink-0">
-    💬
-  </div>
-
-  <div>
-    <h3 className="text-lg font-semibold text-[#D4AF37] mb-1">
-      WhatsApp
-    </h3>
-
-    <a
-      href="https://wa.me/919392315188"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-gray-400 hover:text-[#D4AF37] hover:underline transition cursor-pointer"
-    >
-      +91 93923 15188
-    </a>
-  </div>
-
-</div>
 
 {/* LINKEDIN */}
 <div className="flex items-start gap-4">
