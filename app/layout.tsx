@@ -38,6 +38,29 @@ export const metadata: Metadata = {
     "Freelance Resume Writer",
     "Professional CV Writer",
   ],
+
+  openGraph: {
+    title: "Krishna Kumari Simha | Resume Writer & Portfolio Designer",
+
+    description:
+      "Professional Resume Writing, LinkedIn Optimization, Portfolio Design and Career Branding Services.",
+
+    url: "krishna-kumari-portfolio.vercel.app",
+    
+    siteName: "Krishna Kumari Simha Portfolio",
+
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Krishna Kumari Simha Portfolio",
+      },
+    ],
+
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
